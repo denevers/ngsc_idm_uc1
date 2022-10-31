@@ -1,0 +1,7 @@
+#TODO: resolve the relation between the NIR and whatever the provider has
+# it can't be a blank node. must be a provider persistent identifier
+@prefix owl:<http://www.w3.org/2002/07/owl>.
+<https://geoconnex.ca/id/MineralOccurrence/pgs.20000787> owl:sameAs <urn:sigeom.mines.gouv.qc.ca:id:MineralOccurrence:6030>.
+<https://geoconnex.ca/id/MineralOccurrence/pgs.20000788> owl:sameAs <urn:sigeom.mines.gouv.qc.ca:id:MineralOccurrence:6035>.
+<https://geoconnex.ca/id/MineralOccurrence/pgs.103> owl:sameAs 
+<https://geoconnex.ca/id/MineralOccurrence/pgs.107> owl:sameAs 

@@ -1,0 +1,35 @@
+# describe the ressources on this node
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix schema: <https://schema.org/>.
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix selfie: <https://opengeospatial.github.io/SELFIE/>. # need a real namespace
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+
+
+# the provincial node is connected to the pan canadian node (the connectedTo is symmetric, ie , works both ways)
+
+<https://geoconnex.ca/id/LOD_Node/PanCanadianNode> <https://geoconnex.ca/id/properties/connectedTo> <urn:www.geologyontario.mndm.gov.on.ca:nodes:pgs>.
+
+<urn:www.geologyontario.mndm.gov.on.ca:nodes:pgs>
+ a void:Dataset, schema:Dataset.
+
+
+<https://geoconnex.ca/id/LOD_Node/PanCanadianNode> rdfs:label "National Node for mineral occurrences"@en, "Noeud fédéral pour les occurrences minérales"@fr.
+
+<urn:www.geologyontario.mndm.gov.on.ca:nodes:pgs> rdfs:label "Mineral occurrences for Ontario"@en, "Occurrences minerales pour l'Ontario"@fr.
+
+
+# the provincial node has 1 dataset
+<urn:www.geologyontario.mndm.gov.on.ca:nodes:pgs>
+    schema:subjectOf
+    [
+    a void:Linkset, schema:Dataset,selfie:DataNode_FeatureLinkSet;
+    rdfs:label "List of mineral occurrences"@en ;
+    dc:description "The document provides a list of all mineral occurrences in Ontario"@en ;
+    schema:provider <http://geconnex.ca> ;
+    dct:conformsTo <https://www.geologicalsurveys.ca/MineralOccurrenceList> ;
+    dct:format       "application/x-turtle";
+    schema:url       "ont.ttl"
+    ].
+  

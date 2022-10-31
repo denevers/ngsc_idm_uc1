@@ -1,0 +1,11 @@
+# data from Ontario
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/>.
+<http://www.geologyontario.mndm.gov.on.ca/mndmfiles/mdi/data/records/MDI42A06NW00011.html> 
+    rdfs:label "Buffalo Ankerite; Ankerite"@en;
+    dct:format "text/html".
+
+<http://www.geologyontario.mndm.gov.on.ca/mndmfiles/mdi/data/records/MDI42A06NW00033.html> 
+    rdfs:label "Aunor; Pamour No. 3"@en;
+    dct:format "text/html".
+

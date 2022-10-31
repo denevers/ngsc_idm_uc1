@@ -1,0 +1,25 @@
+# données du Québec
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix erl: <http://xmlns.earthresourceml.org/earthresourceml-lite/2.0>.
+@prefix schema: <https://schema.org/>.
+
+# Quebec does not have a resolvable URL (the URL is actually a query) for a resource, therefore, we use a URN
+
+<urn:sigeom.mines.gouv.qc.ca:id:MineralOccurrence:6030>   rdfs:label "Malachite"@fr;
+ a erl:MineralOccurrence;
+ schema:subjectOf # the way to read this is "this mineral occurrence is the subject of that resource (here, a page in html)
+    [
+    dct:format "text/html";
+    schema:url "https://sigeom.mines.gouv.qc.ca/signet/classes/I1103_index?format=COMPLET&type_reqt=U&mode=NOUVELLE&l=F&entt=GM&numr_utls=5038693&alias_table_crit=F4E02&mnen_crit=NUMR_INTER&oper_crit=EGAL&valr_crit=6030"
+    ].
+
+
+
+<urn:sigeom.mines.gouv.qc.ca:id:MineralOccurrence:6035> rdfs:label "Andradite"@fr;
+a erl:MineralOccurrence;
+schema:subjectOf
+    [
+    dct:format "text/html";
+    schema:url "https://sigeom.mines.gouv.qc.ca/signet/classes/I1103_index?format=COMPLET&type_reqt=U&mode=NOUVELLE&l=F&entt=GM&numr_utls=5038693&alias_table_crit=F4E02&mnen_crit=NUMR_INTER&oper_crit=EGAL&valr_crit=6035"
+    ].

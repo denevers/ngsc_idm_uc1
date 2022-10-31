@@ -1,0 +1,47 @@
+# describe the ressources on this node
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix schema: <https://schema.org/>.
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix selfie: <https://opengeospatial.github.io/SELFIE/>. # need a real namespace
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+
+
+# the provincial node is connected to the pan canadian node (the connectedTo is symmetric, ie , works both ways)
+
+<https://geoconnex.ca/id/LOD_Node/PanCanadianNode> <https://geoconnex.ca/id/properties/connectedTo> <urn:sigeom.mines.gouv.qc.ca:id:nodes:pgs>.
+<https://geoconnex.ca/id/LOD_Node/PanCanadianNode> <https://geoconnex.ca/id/properties/connectedTo> <urn:www.geologyontario.mndm.gov.on.ca:nodes:pgs>.
+
+<urn:sigeom.mines.gouv.qc.ca:id:nodes:pgs>
+ a void:Dataset, schema:Dataset.
+
+
+<https://geoconnex.ca/id/LOD_Node/PanCanadianNode> rdfs:label "National Node for mineral occurrences"@en, "Noeud fédéral pour les occurrences minérales"@fr.
+
+<urn:sigeom.mines.gouv.qc.ca:id:nodes:pgs> rdfs:label "Mineral occurrences for Quebec"@en, "Occurrences minerales pour le Québec"@fr.
+
+
+# the provincial node has 1 dataset
+<urn:sigeom.mines.gouv.qc.ca:id:nodes:pgs>
+    schema:subjectOf
+    [
+    a void:Linkset, schema:Dataset,selfie:DataNode_FeatureLinkSet;
+    rdfs:label "Description du noeud SGP du Québec"@en ;
+    dc:description "Ce document fourni la description du noeud québécois de la stratégie géoscientifique pancanadienne"@fr ;
+    schema:provider <http://geconnex.ca> ;
+    dct:conformsTo <https://www.geologicalsurveys.ca/Nodes> ;
+    dct:format       "application/x-turtle";
+    schema:url       "https://sigeom.mines.gouv.qc.ca/noeuds/qc_node.ttl"
+    ].
+  <urn:www.geologyontario.mndm.gov.on.ca:nodes:pgs>
+    schema:subjectOf
+    [
+    a void:Linkset, schema:Dataset,selfie:DataNode_FeatureLinkSet;
+    rdfs:label "Ontario PGS node"@en ;
+    dc:description "This document provide information about Ontario PGS nodes"@en ;
+    schema:provider <http://geconnex.ca> ;
+    dct:conformsTo <https://www.geologicalsurveys.ca/Nodes> ;
+    dct:format       "application/x-turtle";
+    schema:url       "http://www.geologyontario.mndm.gov.on.ca/nodes/on_node.ttl"
+    ].
+  
